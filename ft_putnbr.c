@@ -5,6 +5,8 @@
  # include <stdarg.h>
  # include <unistd.h>
 
+int ft_putchar(unsigned char c);
+
 void     ft_putnbr(int n)
 {
         long    str;
