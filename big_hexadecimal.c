@@ -1,5 +1,11 @@
-#include "printf.h"
+# include <limits.h>
+ # include <stdio.h>
+ # include <stdlib.h>
+ # include <stdint.h>
+ # include <stdarg.h>
+ # include <unistd.h>
 
+int ft_putchar(unsigned char c);
 void big_hexadecimal(unsigned int c)
 {
         size_t str;
@@ -7,8 +13,8 @@ void big_hexadecimal(unsigned int c)
 
         if (c >= 16 && c != '\0')
         {
-                hexadecimal(str / 16);
-                hexadecimal(str % 16);
+                big_hexadecimal(str / 16);
+                big_hexadecimal(str % 16);
         }
         else if
         

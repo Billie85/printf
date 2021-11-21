@@ -1,4 +1,9 @@
-#include "printf.h"
+# include <limits.h>
+ # include <stdio.h>
+ # include <stdlib.h>
+ # include <stdint.h>
+ # include <stdarg.h>
+ # include <unistd.h>
 
  int ft_output(char **max)
 {
