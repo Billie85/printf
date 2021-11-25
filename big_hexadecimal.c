@@ -1,23 +1,19 @@
-# include <limits.h>
- # include <stdio.h>
- # include <stdlib.h>
- # include <stdint.h>
- # include <stdarg.h>
- # include <unistd.h>
+#include "printf.h"
 
 int ft_putchar(unsigned char c);
-void big_hexadecimal(unsigned int c)
-{
-        size_t str;
-        str = (size_t)c;
+int count_function (size_t number);
 
+size_t big_hexadecimal(unsigned long long c)
+{
+        int len;
+
+        len = count_function(c);
         if (c >= 16 && c != '\0')
         {
-                big_hexadecimal(str / 16);
-                big_hexadecimal(str % 16);
+                big_hexadecimal(c / 16);
+                big_hexadecimal(c % 16);
         }
         else if
-        
                 (c >= 0 && c <= 9)
                 {
                         ft_putchar (c + '0');
@@ -40,4 +36,5 @@ void big_hexadecimal(unsigned int c)
 
         else if (c == 15)
                 ft_putchar ('F'); 
+        return (len);
 }

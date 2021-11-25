@@ -1,18 +1,15 @@
-# include <limits.h>
- # include <stdio.h>
- # include <stdlib.h>
- # include <stdint.h>
- # include <stdarg.h>
- # include <unistd.h>
+#include "printf.h"
 
+int count_function (size_t number);
+int count_decimal (size_t number); // 10進数ver
+size_t big_hexadecimal(unsigned long long c);
+size_t hexadecimal(unsigned long long c);
 int ft_putchar(unsigned char c);
- int ft_output(char **max);
- void ft_unsigned_putnbr(unsigned int n);
- void ft_putnbr(int n);
- int  ft_putstr(char *n);
- void hexadecimal(unsigned int c);
- void big_hexadecimal(unsigned int c);
-void  ft_evolution_putnbr(void *n); 
+size_t ft_evolution_putnbr(size_t n);
+int    ft_putnbr(int n);
+int    ft_putstr(char *n);
+size_t ft_unsigned_putnbr(unsigned int n);
+int ft_output(char **max);
 
 int     ft_printf(const char *s, ...)
 {
@@ -26,7 +23,7 @@ int     ft_printf(const char *s, ...)
         len = 0;
     while (*max != '\0')
         {
-                if (*max != '%')
+                if (*max != '%')//%じゃないなら、そのままの文字を出力してくれる。
                 {
                         len += ft_output(&max);
                 }
@@ -34,40 +31,42 @@ int     ft_printf(const char *s, ...)
                 {
                     if (*max == 'c')
                     {
-                                len += ft_putchar(va_arg(ap, unsigned char));
+                        len += ft_putchar(va_arg(ap, int));
                     }
                     else if (*max == 's')
                     {
-                            len += ft_putstr((char *)va_arg(ap, char *));
+                        len += ft_putstr((char *)va_arg(ap, char *));
                     }
-                    else if (*max == 'p')
+                    else if (*max == 'p')//引数をvoid*とみなして、そのポインタの値を（アドレス）を16進数表記で出力する。
                     {
                         len += ft_putstr ("0x");   //ここだけlenをしちゃうと２しか出力されないから、ダメ
                         len += ft_evolution_putnbr((size_t)va_arg(ap, void *)); 
                     }
-                    else if (*max == 'd')
+                    else if (*max == 'd')//整数を10進で出力する。
                     {
-                        len += ft_putnbr ((size_t)va_arg(ap, void *));
+                        len += ft_putnbr (va_arg(ap, size_t));
                     }
-                    else if (*max == 'i')
+                    else if (*max == 'i')//10進数の整数を表示する。
                     {
                         len += ft_putnbr(va_arg(ap, int));
                     }
-                    else if (*max == 'u')
+                    else if (*max == 'u')//符号なし整数を１０進数で出力してくれる
                     {
                             len += ft_unsigned_putnbr(va_arg(ap, unsigned int));
                     }
-                    else if (*max == 'x')
+                    else if (*max == 'x')//整数を１６進数で出力してくれる
                     {
-                            len += (unsigned long long int)hexadecimal(va_arg(ap, unsigned int));
-                    }
-                    else if (*max == 'X')
+                            len += hexadecimal(va_arg(ap, unsigned int));
+                    }   //unsigned long long 0 ～ 18,446,744,073,709,551,
+                        //unsigned long 0 ～ 4,294,967,295
+
+                    else if (*max == 'X')//整数を１６進数で出力してくれる
                     {
-                            len += (unsigned long long int)big_hexadecimal(va_arg(ap, unsigned int));
+                            len += big_hexadecimal(va_arg(ap, unsigned int));
                     }
                     else if (*max == '%')
                     {
-                            len += ft_putchar ('%');
+                            len += ft_putchar ('%'); //そのまま％を出力してくれる。
                     }
                 max++;
                 }

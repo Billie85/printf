@@ -1,26 +1,7 @@
-# include <limits.h>
- # include <stdio.h>
- # include <stdlib.h>
- # include <stdint.h>
- # include <stdarg.h>
- # include <unistd.h>
+#include "printf.h"
 
-size_t count_function (size_t number)
-{
-        size_t  i;
-        i = 0;
-        while (number != 0)
-        {
-                number =  number /16;
-                i++;
-        }
-        return (i);
-}
-
-int ft_putchar(unsigned char c)
-{
-        return (write(1, &c, 1));
-}
+int count_function (size_t number);
+int ft_putchar(unsigned char c);
 
  size_t ft_evolution_putnbr(size_t n)
  {

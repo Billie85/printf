@@ -8,15 +8,14 @@
  # include <stdarg.h>
  # include <unistd.h>
 
- int ft_putchar(unsigned char c);
- int ft_output(char **max);
- void ft_unsigned_putnbr(unsigned int n);
- void     ft_putnbr(int n);
-  int    ft_putstr(char *s);
- void hexadecimal(unsigned int c);
- void big_hexadecimal(unsigned int c);
-int     ft_printf(const char *s, ...);
-void  ft_evolution_putnbr(void *n);
 int count_function (size_t number);
+int count_decimal (size_t number); // 10進数ver
+size_t big_hexadecimal(unsigned int c);
+size_t hexadecimal(unsigned int c);
+int ft_putchar(int c);
+size_t ft_evolution_putnbr(size_t n);
+int    ft_putnbr(void *n);
+int    ft_putstr(char *n);
+size_t ft_unsigned_putnbr(unsigned int n);
 
 #endif

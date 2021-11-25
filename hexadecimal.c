@@ -1,33 +1,17 @@
-# include <limits.h>
- # include <stdio.h>
- # include <stdlib.h>
- # include <stdint.h>
- # include <stdarg.h>
- # include <unistd.h>
+#include "printf.h"
 
 int ft_putchar(unsigned char c);
+size_t count_function (size_t number);
 
-size_t count_function (size_t number)
+size_t hexadecimal(unsigned long long c)
 {
-        size_t  i;
-        i = 0;
-        while (number != 0)
-        {
-                number =  number /16;
-                i++;
-        }
-        return (i);
-}
+        size_t len;
 
-size_t hexadecimal(unsigned int c)
-{
-        size_t len 
-
-        len = count_function;
+        len = count_function(c);
         if (c >= 16 && c != '\0')
         {
-                hexadecimal(str / 16);
-                hexadecimal(str % 16);
+                hexadecimal(c / 16);//元々strだった。
+                hexadecimal(c % 16);
         }
         else if
         
@@ -53,4 +37,6 @@ size_t hexadecimal(unsigned int c)
 
         else if (c == 15)
                 ft_putchar ('f'); 
+                
+        return (len);
 }

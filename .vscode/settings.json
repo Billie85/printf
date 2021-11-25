@@ -3,7 +3,8 @@
         "libft.h": "c",
         "limits.h": "c",
         "random": "cpp",
-        "sstream": "c"
+        "sstream": "c",
+        "printf.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -1,31 +1,11 @@
-# include <limits.h>
- # include <stdio.h>
- # include <stdlib.h>
- # include <stdint.h>
- # include <stdarg.h>
- # include <unistd.h>
+#include "printf.h"
 
 //整数を10進で出力する
 
-int count_decimal (size_t number)
+int count_decimal (size_t number);
+int ft_putchar(unsigned char c);
 
-{
-        int  i;
-        i = 0;
-        while (number != 0)
-        {
-                number =  number /10;
-                i++;
-        }
-        return (i);
-}
-
-int ft_putchar(unsigned char c)
-{
-        return (write (1, &c, 1));
-}
-
-int     ft_putnbr(void *n)
+int     ft_putnbr(int n) //元々void *だった。
 {
         size_t  len;
 
@@ -37,10 +17,10 @@ int     ft_putnbr(void *n)
         len = count_decimal(n);//ここでlenに代入してる
         if (n >= 10)
         {
-                ft_putnbr((void *)(n / 10));
+                ft_putnbr(n / 10);
                 n = n % 10;
         }
-        if (0 <= n && n < 9)
+        if (0 <= n && n <= 9)
         {
                 ft_putchar(n + '0');
         }
