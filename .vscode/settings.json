@@ -2,6 +2,8 @@
     "files.associations": {
         "libft.h": "c",
         "limits.h": "c",
-        "random": "cpp"
-    }
+        "random": "cpp",
+        "sstream": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

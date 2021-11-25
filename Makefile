@@ -1,7 +1,7 @@
 NAME	= libftprintf.a
 
 SRCS    = ft_printf.c ft_putchar.c ft_output.c ft_unsigned_putnbr.c\
-ft_putstr.c ft_putnbr.c hexadecimal.c big_hexadecimal.c ft_evolution_putnbr.c
+ft_putstr.c ft_putnbr.c hexadecimal.c big_hexadecimal.c count_function ft_evolution_putnbr.c
 
 FLAGS	= -Wall -Wextra -Werror
 

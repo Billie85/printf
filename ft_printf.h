@@ -17,5 +17,6 @@
  void big_hexadecimal(unsigned int c);
 int     ft_printf(const char *s, ...);
 void  ft_evolution_putnbr(void *n);
+int count_function (size_t number);
 
 #endif

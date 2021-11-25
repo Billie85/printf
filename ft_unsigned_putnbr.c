@@ -5,19 +5,40 @@
  # include <stdarg.h>
  # include <unistd.h>
  
-int ft_putchar(unsigned char c);
- void ft_unsigned_putnbr(unsigned int n)
-{
-        long str;
+ //符号なし整数を10進で出力する
+ //unsigned int, unsigned short
 
-        str = n;
-        if (str >= 10)
+int count_decimal (size_t number)//数える関数
+{
+        int  i;
+        i = 0;
+        while (number != 0)
         {
-                ft_unsigned_putnbr(str / 10);
-                str = str % 10;
+                number =  number /10; 
+                //10で割ってる。
+                i++;
         }
-        if (str < 10)
+        return (i);
+}
+
+int ft_putchar(unsigned char c)//出力する関数
+{
+        return (write (1, &c, 1));
+}
+
+size_t ft_unsigned_putnbr(unsigned int n)//符号なし
+{ 
+        size_t  len;
+
+        len = count_decimal(n);
+        if (n >= 10)
         {
-                ft_putchar('0' + str);
+                ft_unsigned_putnbr((void*)(n / 10);
+                n = n % 10;
         }
+        if (0 <= n && n < 9)
+        {
+                ft_putchar(n + '0');
+        }
+        return (len);
 }

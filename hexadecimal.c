@@ -6,11 +6,24 @@
  # include <unistd.h>
 
 int ft_putchar(unsigned char c);
-void hexadecimal(unsigned int c)
-{
-        size_t str;
-        str = (size_t)c;
 
+size_t count_function (size_t number)
+{
+        size_t  i;
+        i = 0;
+        while (number != 0)
+        {
+                number =  number /16;
+                i++;
+        }
+        return (i);
+}
+
+size_t hexadecimal(unsigned int c)
+{
+        size_t len 
+
+        len = count_function;
         if (c >= 16 && c != '\0')
         {
                 hexadecimal(str / 16);

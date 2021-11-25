@@ -9,10 +9,10 @@ int ft_putchar(unsigned char c);
  int ft_output(char **max);
  void ft_unsigned_putnbr(unsigned int n);
  void ft_putnbr(int n);
-  int ft_putstr(char *s);
+ int  ft_putstr(char *n);
  void hexadecimal(unsigned int c);
  void big_hexadecimal(unsigned int c);
-void  ft_evolution_putnbr(void *n);
+void  ft_evolution_putnbr(void *n); 
 
 int     ft_printf(const char *s, ...)
 {
@@ -23,7 +23,7 @@ int     ft_printf(const char *s, ...)
         max = (char *)s;
         va_start(ap, s);
 
-        len = 0; 
+        len = 0;
     while (*max != '\0')
         {
                 if (*max != '%')
@@ -34,7 +34,7 @@ int     ft_printf(const char *s, ...)
                 {
                     if (*max == 'c')
                     {
-                                len += ft_putchar((unsigned char)va_arg(ap, int));
+                                len += ft_putchar(va_arg(ap, unsigned char));
                     }
                     else if (*max == 's')
                     {
@@ -42,32 +42,32 @@ int     ft_printf(const char *s, ...)
                     }
                     else if (*max == 'p')
                     {
-                            ft_putstr ("0x");
-                            ft_evolution_putnbr (va_arg(ap, void *));
+                        len += ft_putstr ("0x");   //ここだけlenをしちゃうと２しか出力されないから、ダメ
+                        len += ft_evolution_putnbr((size_t)va_arg(ap, void *)); 
                     }
                     else if (*max == 'd')
                     {
-                            ft_putnbr(va_arg(ap, int));
+                        len += ft_putnbr ((size_t)va_arg(ap, void *));
                     }
                     else if (*max == 'i')
                     {
-                            ft_putnbr(va_arg(ap, int));
+                        len += ft_putnbr(va_arg(ap, int));
                     }
                     else if (*max == 'u')
                     {
-                            ft_unsigned_putnbr(va_arg(ap, unsigned int));
+                            len += ft_unsigned_putnbr(va_arg(ap, unsigned int));
                     }
                     else if (*max == 'x')
                     {
-                            hexadecimal(va_arg(ap, unsigned int));
+                            len += (unsigned long long int)hexadecimal(va_arg(ap, unsigned int));
                     }
                     else if (*max == 'X')
                     {
-                            big_hexadecimal(va_arg(ap, unsigned int));
+                            len += (unsigned long long int)big_hexadecimal(va_arg(ap, unsigned int));
                     }
                     else if (*max == '%')
                     {
-                            ft_putchar ('%');
+                            len += ft_putchar ('%');
                     }
                 max++;
                 }
