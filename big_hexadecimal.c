@@ -1,7 +1,4 @@
-#include "printf.h"
-
-int ft_putchar(unsigned char c);
-int count_function (size_t number);
+#include "ft_printf.h"
 
 size_t big_hexadecimal(unsigned long long c)
 {

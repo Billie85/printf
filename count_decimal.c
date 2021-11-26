@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "ft_printf.h"
 
 int count_decimal (size_t number)
 {

@@ -1,10 +1,6 @@
-#include "printf.h"
+#include "ft_printf.h"
 
 //整数を10進で出力する
-
-int count_decimal (size_t number);
-int ft_putchar(unsigned char c);
-
 int     ft_putnbr(int n) //元々void *だった。
 {
         size_t  len;
@@ -26,14 +22,3 @@ int     ft_putnbr(int n) //元々void *だった。
         }
         return (len);
 }
-
-/*int main ()
-{
-	char str[] = "42";
-        int i = ft_putnbr (str);
-        printf ("\n");
-        printf("%d\n",i);
-        return (0);
-
-return (0);
-}*/

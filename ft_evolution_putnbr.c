@@ -1,7 +1,4 @@
-#include "printf.h"
-
-int count_function (size_t number);
-int ft_putchar(unsigned char c);
+#include "ft_printf.h"
 
  size_t ft_evolution_putnbr(size_t n)
  {
@@ -27,12 +24,3 @@ int ft_putchar(unsigned char c);
         }
        return (len);
 }
-
-/*int main ()
-{
-        char str[] = "4242";
-        int i = ft_evolution_putnbr (str);
-        printf ("\n");
-        printf("%d\n",i);
-        return (0);
-}*/

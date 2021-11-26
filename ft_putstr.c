@@ -1,9 +1,5 @@
-#include "printf.h"
-#define _GNU_SOURCE
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
 #include <unistd.h>
+#include "ft_printf.h"
 
 int    ft_putstr(char *n)
 {
