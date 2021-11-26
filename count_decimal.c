@@ -1,6 +1,6 @@
 #include "printf.h"
 
-int count_function (size_t number)
+int count_decimal (size_t number)
 {
         int  i;
         

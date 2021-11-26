@@ -1,5 +1,5 @@
-# ifndef PRINTF_H
-# define PRINTF_H
+# ifndef FT_PRINTF_H
+# define FT_PRINTF_H //インクルードガード
 
  # include <limits.h>
  # include <stdio.h>
@@ -15,7 +15,8 @@ size_t hexadecimal(unsigned int c);
 int ft_putchar(int c);
 size_t ft_evolution_putnbr(size_t n);
 int    ft_putnbr(void *n);
-int    ft_putstr(char *n);
+int    ft_putstr(char *n);  
 size_t ft_unsigned_putnbr(unsigned int n);
+ int ft_output(char **max);
 
 #endif

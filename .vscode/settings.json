@@ -4,7 +4,9 @@
         "limits.h": "c",
         "random": "cpp",
         "sstream": "c",
-        "printf.h": "c"
+        "printf.h": "c",
+        "unistd.h": "c",
+        "stdio.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

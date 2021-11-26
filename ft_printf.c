@@ -1,10 +1,12 @@
-#include "printf.h"
+#include "ft_printf.h"
+
+//フォーマット指定 %s をしたなら char* 型の値が、 %d をしたなら int 型の値が必要です。
 
 int count_function (size_t number);
 int count_decimal (size_t number); // 10進数ver
 size_t big_hexadecimal(unsigned long long c);
 size_t hexadecimal(unsigned long long c);
-int ft_putchar(unsigned char c);
+int ft_putchar(int c);
 size_t ft_evolution_putnbr(size_t n);
 int    ft_putnbr(int n);
 int    ft_putstr(char *n);
@@ -73,4 +75,11 @@ int     ft_printf(const char *s, ...)
         }
         va_end(ap);
         return (len);
+}
+
+
+int main (void)
+{
+	ft_printf(" %c %c %c ", 0, '1', '2');
+	return (0);
 }

@@ -13,7 +13,7 @@ int ft_putchar(unsigned char c);
 
         if (n >= 16)
         {
-                ft_evolution_putnbr((void *)(n / 16));
+                ft_evolution_putnbr(n / 16);
                 n = n % 16;
         }
         if (0 <= n && n <= 9)

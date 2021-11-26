@@ -1,10 +1,10 @@
-# include <limits.h>
- # include <stdio.h>
- # include <stdlib.h>
- # include <stdint.h>
- # include <stdarg.h>
- # include <unistd.h>
- 
+#include "printf.h"
+#define _GNU_SOURCE
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <unistd.h>
+
 int    ft_putstr(char *n)
 {
         int i;
@@ -13,7 +13,6 @@ int    ft_putstr(char *n)
         //第一引数がnullだったら(null)っていう文字を出力させてあげる。(write何文字出力させるか）
         //ポインタの値は慣れといたほうがいい。
         //
-
         while (*n)
         {
                 i++;
