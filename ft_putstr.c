@@ -9,6 +9,9 @@ int    ft_putstr(char *n)
         //第一引数がnullだったら(null)っていう文字を出力させてあげる。(write何文字出力させるか）
         //ポインタの値は慣れといたほうがいい。
         //
+
+        if (n == NULL)
+        \
         while (*n)
         {
                 i++;

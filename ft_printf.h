@@ -1,13 +1,14 @@
-# ifndef FT_PRINTF_H
+#ifndef FT_PRINTF_H
 # define FT_PRINTF_H //インクルードガード
 
- # include <limits.h>
- # include <stdio.h>
- # include <stdlib.h>
- # include <stdint.h>
- # include <stdarg.h>
- # include <unistd.h>
+# include <limits.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <stdint.h>
+# include <stdarg.h>
+# include <unistd.h>
 
+int     ft_printf(const char *s, ...);
 int     count_function (size_t number);
 int     count_decimal (size_t number); // 10進数ver
 size_t  big_hexadecimal(unsigned long long c);

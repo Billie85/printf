@@ -7,7 +7,9 @@
         "printf.h": "c",
         "unistd.h": "c",
         "stdio.h": "c",
-        "ft_printf.h": "c"
+        "ft_printf.h": "c",
+        "stdint.h": "c",
+        "stdarg.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
