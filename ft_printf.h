@@ -10,7 +10,7 @@
 
 int     ft_printf(const char *s, ...);
 int     count_function (size_t number);
-int     count_decimal (size_t number); // 10進数ver
+int     count_decimal (size_t number);
 size_t  big_hexadecimal(unsigned long long c);
 size_t  hexadecimal(unsigned long long c);
 int     ft_putchar(int c);

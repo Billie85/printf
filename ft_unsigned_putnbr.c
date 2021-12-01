@@ -1,8 +1,6 @@
 #include "ft_printf.h"
- 
- //符号なし整数を10進で出力する
- //unsigned int, unsigned short
-size_t ft_unsigned_putnbr(unsigned int n)//符号なし
+
+size_t ft_unsigned_putnbr(unsigned int n)
 { 
         size_t  len;
 

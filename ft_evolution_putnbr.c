@@ -5,8 +5,6 @@
         size_t   len;
         
         len = count_function(n);
-        //再帰関数に入る前にlenを確保する。
-        //エラー処理も楽になる。lenを変えるだけで大丈夫。
 
         if (n >= 16)
         {
@@ -20,7 +18,6 @@
         {
                 n = n - 10 + 'a';
                 ft_putchar (n);
-                //return (count_function(n));
         }
        return (len);
 }

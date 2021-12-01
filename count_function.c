@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int count_function (size_t number)//16で割る
+int count_function (size_t number)
 {
         int  i;
         

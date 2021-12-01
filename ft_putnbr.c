@@ -10,7 +10,7 @@ int     ft_putnbr(int n) //元々void *だった。
                 ft_putchar('-');
                 n = n * -1;
         }
-        len = count_decimal(n);//ここでlenに代入してる
+        len = count_decimal(n);
         if (n >= 10)
         {
                 ft_putnbr(n / 10);
