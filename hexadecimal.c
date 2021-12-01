@@ -7,7 +7,7 @@ size_t hexadecimal(unsigned long long c)
         len = count_function(c);
         if (c >= 16 && c != '\0')
         {
-                hexadecimal(c / 16);//元々strだった。
+                hexadecimal(c / 16);
                 hexadecimal(c % 16);
         }
         else if
