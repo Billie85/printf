@@ -1,9 +1,8 @@
 #include "ft_printf.h"
 
-//整数を10進で出力する
-int     ft_putnbr(int n) //元々void *だった。
+ssize_t  ft_putnbr(int n)
 {
-        size_t  len;
+        size_t len;
 
         if (n < 0)
         {
@@ -11,6 +10,7 @@ int     ft_putnbr(int n) //元々void *だった。
                 n = n * -1;
         }
         len = count_decimal(n);
+        
         if (n >= 10)
         {
                 ft_putnbr(n / 10);

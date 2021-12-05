@@ -1,8 +1,8 @@
 #include "ft_printf.h"
 
-int count_function (size_t number)
+size_t count_function (size_t number)
 {
-        int  i;
+        size_t i;
         
         i = 0;
         while (number != 0)

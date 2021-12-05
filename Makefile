@@ -1,8 +1,7 @@
 NAME	= libftprintf.a
 
-SRCS    = ft_printf.c ft_putchar.c ft_output.c ft_unsigned_putnbr.c\
-ft_putstr.c ft_putnbr.c hexadecimal.c big_hexadecimal.c ft_evolution_putnbr.c\
-count_function.c count_decimal.c
+SRCS    = ft_printf ft_output ft_putstr ft_putchar ft_evolution_putnbr ft_putnbr\
+count_decimal ft_putnbr_base\
 
 FLAGS	= -Wall -Wextra -Werror
 
@@ -15,13 +14,13 @@ RM	= rm -rf
 all     : $(NAME)
 
 %.o	: %.c
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME)	: $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean	: 
-	$(RM) $(OBJS) $(OBJS_B)
+	$(RM) $(OBJS)
 
 fclean	: clean
 	$(RM) $(NAME)

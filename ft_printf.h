@@ -1,5 +1,5 @@
 #ifndef FT_PRINTF_H
-# define FT_PRINTF_H //インクルードガード
+# define FT_PRINTF_H
 
 # include <limits.h>
 # include <stdio.h>
@@ -9,15 +9,12 @@
 # include <unistd.h>
 
 int     ft_printf(const char *s, ...);
-int     count_function (size_t number);
-int     count_decimal (size_t number);
-size_t  big_hexadecimal(unsigned long long c);
-size_t  hexadecimal(unsigned long long c);
-int     ft_putchar(int c);
-size_t  ft_evolution_putnbr(size_t n);
-int     ft_putnbr(int n);
-int     ft_putstr(char *n);  
-size_t  ft_unsigned_putnbr(unsigned int n);
-int     ft_output(char **max);
+int ft_output(char *max);
+ssize_t ft_putstr(char *n);
+ssize_t ft_putchar(int c);
+ssize_t ft_evolution_putnbr(size_t n);
+ssize_t  ft_putnbr(int n);
+size_t count_decimal (size_t number);
+ssize_t	putnbr_base(unsigned long long n, char *base);
 
 #endif

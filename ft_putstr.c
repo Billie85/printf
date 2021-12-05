@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "ft_printf.h"
 
-int    ft_putstr(char *n)
+ssize_t ft_putstr(char *n)
 {
         int i;
 
@@ -12,7 +12,7 @@ int    ft_putstr(char *n)
         while (*n)
         {
                 i++;
-                write (1, n, 1);
+                write(1, n, 1);
                 n++;
         }
         return (i);
