@@ -1,7 +1,7 @@
 NAME	= libftprintf.a
 
 SRCS    = ft_printf.c ft_output.c ft_putstr.c ft_putchar.c ft_evolution_putnbr.c ft_putnbr.c\
-count_decimal.c ft_putnbr_base.c
+count_decimal.c putnbr_base.c ft_strlen.c
 
 OBJS	= $(SRCS:%.c=%.o)
 

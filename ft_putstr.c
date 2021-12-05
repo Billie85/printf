@@ -5,6 +5,7 @@ ssize_t ft_putstr(char *n)
 {
         int i;
 
+        i = 0;
         if (n == NULL)
         {
                 write(1, "(null)", 6);
