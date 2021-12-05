@@ -11,7 +11,7 @@
                 ft_evolution_putnbr(n / 16);
                 n = n % 16;
         }
-        if (0 <= n && n <= 9)
+        if (0 < n && n < 9)
               ft_putchar (n + '0');
 
         if (10 <= n && n <= 15)

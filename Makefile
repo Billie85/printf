@@ -1,14 +1,12 @@
 NAME	= libftprintf.a
 
-SRCS    = ft_printf ft_output ft_putstr ft_putchar ft_evolution_putnbr ft_putnbr\
-count_decimal ft_putnbr_base\
-
-FLAGS	= -Wall -Wextra -Werror
+SRCS    = ft_printf.c ft_output.c ft_putstr.c ft_putchar.c ft_evolution_putnbr.c ft_putnbr.c\
+count_decimal.c ft_putnbr_base.c
 
 OBJS	= $(SRCS:%.c=%.o)
 
 CC	= gcc
-
+CFLAGS	= -Wall -Wextra -Werror
 RM	= rm -rf
 
 all     : $(NAME)
