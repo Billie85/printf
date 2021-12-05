@@ -4,12 +4,20 @@ ssize_t  ft_putnbr(int n)
 {
         size_t len;
 
+        len = 0;
+        if (n == -2147483648)
+        {
+                write(1, "-2147483648", 11);
+                len = 11;
+                return (len);
+        }
+
         if (n < 0)
         {
                 ft_putchar('-');
                 n = n * -1;
         }
-        len = count_decimal(n);
+        len += count_decimal(n);
         
         if (n >= 10)
         {

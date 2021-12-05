@@ -3,7 +3,7 @@
 int ft_printf(const char *s, ...)
 {
     char *max;
-    int len;
+    ssize_t len;
     va_list ap;
 
     max = (char *)s;
@@ -33,7 +33,7 @@ int ft_printf(const char *s, ...)
             }
             else if (*max == 'd' || *max == 'i')
             {
-                len += ft_putnbr(va_arg(ap, size_t));
+                len += ft_putnbr(va_arg(ap, int));//マイナスの値が来た時にオーバーフローする。
             }
             else if (*max == 'u')
             {
@@ -51,16 +51,11 @@ int ft_printf(const char *s, ...)
             {
                 len += ft_putchar('%');
             }
-            max++;
+            ++max;
+            if (len >= INT_MAX)
+                return (-1);
         }
     }
     va_end(ap);
     return (len);
 }
-
-/*int main
-{
-    printf("%c\n", 'b');
-    ft_printf("%c\n", 'b');
-    return (0);
-}*/

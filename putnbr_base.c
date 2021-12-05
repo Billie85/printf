@@ -1,12 +1,10 @@
 #include "ft_printf.h"
 
-typedef unsigned long long	t_ull;
-
-ssize_t	ft_putnbr_base(t_ull n, char *base)
+ssize_t	ft_putnbr_base(unsigned long long n, char *base)
 {
 	ssize_t		len;
-	t_ull		e;
-	const t_ull	b = ft_strlen(base); //
+	unsigned long long		e;
+	const unsigned long long	b = ft_strlen(base);
 
 	if (b < 2)
 		return (0);

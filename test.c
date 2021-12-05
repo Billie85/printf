@@ -1,8 +1,14 @@
+#include <limits.h>
 #include "ft_printf.h"
 
-int main ()
+int main (void)
 {
-    printf("%c\n",'b');
-    ft_printf("%c\n",'b');
-    return(0);
+    printf ("%d", INT_MIN -1);
+    printf ("\n");
+    ft_printf ("%d", INT_MIN -1);
+    printf ("\n");
+    printf ("%d", INT_MIN);
+    printf ("\n");
+    ft_printf ("%d", INT_MIN);
+    return (0);
 }
