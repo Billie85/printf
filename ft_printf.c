@@ -7,7 +7,7 @@ int ft_printf(const char *s, ...)
     va_list ap;
 
     max = (char *)s;
-    va_start(ap, s);
+    va_start (ap, s);
 
     len = 0;
     while (*max != '\0')
@@ -33,7 +33,7 @@ int ft_printf(const char *s, ...)
             }
             else if (*max == 'd' || *max == 'i')
             {
-                len += ft_putnbr(va_arg(ap, int));//マイナスの値が来た時にオーバーフローする。
+                len += ft_putnbr(va_arg(ap, int));
             }
             else if (*max == 'u')
             {

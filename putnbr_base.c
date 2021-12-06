@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-ssize_t	ft_putnbr_base(unsigned long long n, char *base)
+ssize_t	putnbr_base(unsigned long long n, char *base)
 {
 	ssize_t		len;
 	unsigned long long		e;
