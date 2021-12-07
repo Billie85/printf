@@ -16,11 +16,12 @@ int ft_printf(const char *s, ...)
         {
             len += ft_output(&max);
         }
-        else if (*max++ == '%')
+        else if (*max == '%')
         {
+            ++max;
             if (*max == 'c')
             {
-                len += ft_putchar(va_arg(ap, int));
+                len += ft_putchar((unsigned char)va_arg(ap, int));
             }
             else if (*max == 's')
             {
@@ -51,10 +52,10 @@ int ft_printf(const char *s, ...)
             {
                 len += ft_putchar('%');
             }
+            ++max;
+        }
              if (len >= INT_MAX)
                 return (-1);
-            max++;
-        }
     }
     va_end(ap);
     return (len);

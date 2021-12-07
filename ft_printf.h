@@ -11,7 +11,7 @@
 int     ft_printf(const char *s, ...);
 int ft_output(char **max);
 ssize_t ft_putstr(char *n);
-ssize_t ft_putchar(int c);
+ssize_t ft_putchar(char c);
 ssize_t ft_evolution_putnbr(size_t n);
 ssize_t  ft_putnbr(int n);
 size_t count_decimal (size_t number);
