@@ -51,9 +51,9 @@ int ft_printf(const char *s, ...)
             {
                 len += ft_putchar('%');
             }
-            ++max;
-            if (len >= INT_MAX)
+             if (len >= INT_MAX)
                 return (-1);
+            max++;
         }
     }
     va_end(ap);
