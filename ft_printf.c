@@ -30,7 +30,7 @@ int ft_printf(const char *s, ...)
             else if (*max == 'p')
              {
                  len += ft_putstr("0x");
-                 len += ft_evolution_putnbr((size_t)va_arg(ap, void *));
+                 len += putnbr_base(va_arg(ap, unsigned int), "0123456789abcdef");
              }
              else if (*max == 'd' || *max == 'i')
              {
