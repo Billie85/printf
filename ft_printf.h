@@ -14,9 +14,9 @@ ssize_t ft_putstr(char *n);
 ssize_t ft_putchar(char c);
 ssize_t ft_evolution_putnbr(size_t n);
 ssize_t  ft_putnbr(int n);
-size_t count_decimal (size_t number);
+size_t count_decimal (int number);
 ssize_t	putnbr_base(unsigned long long n, char *base);
-size_t count_function (size_t number);
+size_t count_function (int number);
 size_t	ft_strlen(char const *s);
 
 #endif

@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-size_t count_decimal (size_t number)
+size_t count_decimal (int number)
 {
         size_t  i;
         
