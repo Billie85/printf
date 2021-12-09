@@ -11,7 +11,6 @@ ssize_t  ft_putnbr(int n)
                 len = 11;
                 return (len);
         }
-
         if (n < 0)
         {
                 ft_putchar('-');
