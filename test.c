@@ -2,7 +2,12 @@
 
 int main(void)
 {
-	printf("%d\n", LONG_MAX);
-	ft_printf("%d\n", LONG_MAX);
+	int  i;
+
+	i = 0;
+	i = printf("%d\n", 0);
+	printf("%d\n", i);
+	i = ft_printf("%d\n", 0);
+	printf("%d\n", i);
 	return (0);
 }

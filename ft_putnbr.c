@@ -7,12 +7,12 @@ ssize_t  ft_putnbr(int n)
         len = 0;
         if (n == -2147483648)
         {
-                write(1, "-2147483648", 11);
-                len = 11;
-                return (len);
+                return (write(1, "-2147483648", 11));
         }
+
         if (n < 0)
         {
+                len = 1;
                 ft_putchar('-');
                 n = n * -1;
         }
