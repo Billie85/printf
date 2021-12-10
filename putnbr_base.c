@@ -1,11 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   putnbr_base.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kayumi <kayumi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/10 16:51:14 by kayumi            #+#    #+#             */
+/*   Updated: 2021/12/10 18:49:43 by kayumi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 ssize_t	putnbr_base(unsigned long long n, char *base)
 {
-	ssize_t	len;
-	const unsigned long long	b = ft_strlen(base);
+	ssize_t						len;
+	unsigned long long			b;
 	unsigned long long			e;
 
+	b = ft_strlen(base);
 	if (b < 2)
 		return (0);
 	len = 0;
