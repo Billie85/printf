@@ -2,9 +2,9 @@
 
 ssize_t	putnbr_base(unsigned long long n, char *base)
 {
-	ssize_t		len;
-	unsigned long long		e;
+	ssize_t	len;
 	const unsigned long long	b = ft_strlen(base);
+	unsigned long long			e;
 
 	if (b < 2)
 		return (0);
