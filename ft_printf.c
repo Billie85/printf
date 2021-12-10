@@ -6,7 +6,7 @@
 /*   By: kayumi <kayumi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 12:44:19 by kayumi            #+#    #+#             */
-/*   Updated: 2021/12/10 16:13:39 by kayumi           ###   ########.fr       */
+/*   Updated: 2021/12/10 18:55:53 by kayumi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,17 @@ int	another_function(char *max, va_list *ap)
 		len += putnbr_base(va_arg(*ap, unsigned long long), OX);
 	}
 	if (*max == 'u')
-	len += putnbr_base(va_arg(*ap, unsigned int), NUM);
+		len += putnbr_base(va_arg(*ap, unsigned int), NUM);
 	else if (*max == 'x')
-	len += putnbr_base(va_arg(*ap, unsigned int), OX);
+		len += putnbr_base(va_arg(*ap, unsigned int), OX);
 	else if (*max == 'X')
-	len += putnbr_base(va_arg(*ap, unsigned int), O_X);
+		len += putnbr_base(va_arg(*ap, unsigned int), O_X);
 	else if (*max == 'd' || *max == 'i')
-	len += ft_putnbr(va_arg(*ap, int));
+		len += ft_putnbr(va_arg(*ap, int));
 	else if (*max == 's')
-	len += ft_putstr(va_arg(*ap, char *));
+		len += ft_putstr(va_arg(*ap, char *));
 	else if (*max == '%')
-	len += ft_putchar('%');
+		len += ft_putchar('%');
 	return (len);
 }
 
