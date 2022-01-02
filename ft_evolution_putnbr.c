@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-ssize_t	ft_evolution_putnbr(size_t n)
+size_t	ft_evolution_putnbr(size_t n)
 {
-	ssize_t	len;
+	size_t	len;
 
 	len = count_function(n);
 	if (n >= 16)

@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-ssize_t	ft_putnbr(int n)
+size_t	ft_putnbr(int n)
 {
 	size_t	len;
 

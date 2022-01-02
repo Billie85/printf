@@ -6,15 +6,15 @@
 /*   By: kayumi <kayumi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 16:51:14 by kayumi            #+#    #+#             */
-/*   Updated: 2021/12/10 18:49:43 by kayumi           ###   ########.fr       */
+/*   Updated: 2022/01/02 15:32:39 by kayumi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-ssize_t	putnbr_base(unsigned long long n, char *base)
+size_t	putnbr_base(unsigned long long n, char *base)
 {
-	ssize_t						len;
+	size_t						len;
 	unsigned long long			b;
 	unsigned long long			e;
 
