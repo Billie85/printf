@@ -6,7 +6,7 @@
 /*   By: kayumi <kayumi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 13:26:50 by kayumi            #+#    #+#             */
-/*   Updated: 2021/12/10 18:48:38 by kayumi           ###   ########.fr       */
+/*   Updated: 2022/01/02 17:43:58 by kayumi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,4 @@ size_t	putnbr_base(unsigned long long n, char *base);
 size_t	count_function(int number);
 size_t	count_decimal(int number);
 size_t	ft_strlen(char const *s);
-int		another_function(char *max, va_list *ap);
 #endif
