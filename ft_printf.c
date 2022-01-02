@@ -6,7 +6,7 @@
 /*   By: kayumi <kayumi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 18:39:36 by kayumi            #+#    #+#             */
-/*   Updated: 2022/01/02 19:24:48 by kayumi           ###   ########.fr       */
+/*   Updated: 2022/01/02 19:40:58 by kayumi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	another_function(char *max, va_list ap)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	if (*max == 'p')
@@ -37,11 +37,11 @@ size_t	another_function(char *max, va_list ap)
 	return (len);
 }
 
-int ft_printf(const char *s, ...)
+int	ft_printf(const char *s, ...)
 {
-	char *max;
-	size_t len;
-	va_list ap;
+	char	*max;
+	size_t	len;
+	va_list	ap;
 
 	max = (char *)s;
 	va_start(ap, s);
@@ -63,5 +63,5 @@ int ft_printf(const char *s, ...)
 	va_end(ap);
 	if (len > INT_MAX)
 		return (-1);
-    return ((int)len);
+	return ((int)len);
 }
