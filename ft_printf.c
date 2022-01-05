@@ -6,7 +6,7 @@
 /*   By: kayumi <kayumi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 18:39:36 by kayumi            #+#    #+#             */
-/*   Updated: 2022/01/02 19:40:58 by kayumi           ###   ########.fr       */
+/*   Updated: 2022/01/05 20:04:46 by kayumi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ int	ft_printf(const char *s, ...)
 				len += another_function(max, ap);
 			++max;
 		}
+		if (len > INT_MAX)
+			return (-1);
 	}
 	va_end(ap);
-	if (len > INT_MAX)
-		return (-1);
 	return ((int)len);
 }
